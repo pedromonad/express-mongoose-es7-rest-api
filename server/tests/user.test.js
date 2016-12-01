@@ -26,7 +26,7 @@ describe('## User APIs', () => {
   describe('# POST /api/users', () => {
     it('should create a new user', (done) => {
       request(app)
-        .post('/api/users')
+        .post('/apiv1/users')
         .send(user)
         .expect(httpStatus.OK)
         .then((res) => {
@@ -42,7 +42,7 @@ describe('## User APIs', () => {
   describe('# GET /api/users/:userId', () => {
     it('should get user details', (done) => {
       request(app)
-        .get(`/api/users/${user._id}`)
+        .get(`/apiv1/users/${user._id}`)
         .expect(httpStatus.OK)
         .then((res) => {
           expect(res.body.username).to.equal(user.username);

@@ -1,7 +1,7 @@
 const AuthCtrl = require('./controller');
 const router = require('express').Router();
 const expressJwt = require('express-jwt');
-const config = require('../../config/localConfig');
+const config = require('../../../config/localConfig');
 
 
 /** POST /api/auth/login - Returns token if correct username and password is provided */

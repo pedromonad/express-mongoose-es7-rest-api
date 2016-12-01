@@ -15,7 +15,7 @@
     "build": "gulp",
     "lint": "esw *.js server config --color",
     "lint:watch": "yarn lint -- --watch",
-    "test": "NODE_ENV=test babel-node node_modules/.bin/isparta cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register ./server/**/*.test.js",
+    "test": "cross-env NODE_ENV=test babel-node node_modules/.bin/isparta cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register ./server/**/*.test.js",
     "test:watch": "yarn test -- --watch",
     "test:check-coverage": "yarn test && istanbul check-coverage",
     "report-coverage": "coveralls < ./coverage/lcov.info"
@@ -38,13 +38,14 @@
     "boilerplate"
   ],
   "dependencies": {
-    "bcrypt": "^0.8.7",
     "babel-runtime": "6.18.0",
+    "bcrypt": "^0.8.7",
     "bluebird": "3.4.6",
     "body-parser": "1.15.2",
     "compression": "1.6.2",
     "cookie-parser": "1.4.3",
     "cors": "2.8.1",
+    "cross-env": "3.1.3",
     "debug": "^2.2.0",
     "express": "4.14.0",
     "express-jwt": "5.1.0",

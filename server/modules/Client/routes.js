@@ -1,9 +1,9 @@
 const ClientCtrl = require('./controller');
 const router = require('express').Router();
 const validate = require ('express-validation');
-const paramValidation = require('../../config/param-validation');
+const paramValidation = require('../../../config/param-validation');
 const expressJwt = require('express-jwt');
-const config = require('../../config/localConfig');
+const config = require('../../../config/localConfig');
 const jwtAuth = expressJwt({ secret: config.jwtSecret });
 
 router.route('/')
