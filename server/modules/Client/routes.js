@@ -8,20 +8,19 @@ const jwtAuth = expressJwt({ secret: config.jwtSecret });
 
 router.route('/')
   /** GET /api/clients - Get list of clients */
-  .get(jwtAuth, ClientCtrl.list)
+  .get(ClientCtrl.list)
 
   /** POST /api/clients - Create new client */
-  .post(
-      jwtAuth, validate(paramValidation.createClient), 
+  .post(validate(paramValidation.createClient), 
       ClientCtrl.create);
 
 router.route('/:clientId')
   /** GET /api/clients/:clientId - Get client */
-  .get(jwtAuth, ClientCtrl.get)
+  .get(ClientCtrl.get)
 
   /** PUT /api/clients/:clientId - Update client */
   .put(
-      jwtAuth, validate(paramValidation.updateClient), 
+      validate(paramValidation.updateClient), 
       ClientCtrl.update)
 
   /** DELETE /api/clients/:clientId - Delete client */
@@ -30,13 +29,13 @@ router.route('/:clientId')
 
 router.route('/:clientId/comments')
   .post(
-      jwtAuth, validate(paramValidation.createComment),
+       validate(paramValidation.createComment),
        ClientCtrl.createComment)
 
   .get(ClientCtrl.getComments);
 
 router.route('/:clientId/comments/:commentId')  
-  .delete(jwtAuth, ClientCtrl.removeComment);
+  .delete(ClientCtrl.removeComment);
 
 
 /** Load client when API with clientId route parameter is hit */
