@@ -31,7 +31,7 @@ describe('## Misc', () => {
         })
         .catch(done);
     });
-
+/*
     it('should handle express validation error - username is required', (done) => {
       request(app)
         .post('/apiv1/users')
@@ -44,6 +44,6 @@ describe('## Misc', () => {
           done();
         })
         .catch(done);
-    });
+    });*/
   });
 });
