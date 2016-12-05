@@ -10,7 +10,5 @@ cache:
   - node_modules
 git:
   depth: 3
-install:
-    - npm install
 after_script:
   - yarn report-coverage
