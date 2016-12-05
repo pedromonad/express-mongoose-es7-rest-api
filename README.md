@@ -3,8 +3,8 @@
 
 Clone the repo:
 ```sh
-git clone git@github.com:KunalKapadia/express-mongoose-es6-rest-api.git
-cd express-mongoose-es6-rest-api
+git clone git@github.com:pedrobarrostech/express-mongoose-es7-rest-api.git
+cd express-mongoose-es7-rest-api
 ```
 
 Install yarn:
@@ -23,7 +23,7 @@ Start server:
 yarn start
 
 # Selectively set DEBUG env var to get logs
-DEBUG=express-mongoose-es6-rest-api:* yarn start
+DEBUG=express-mongoose-es7-rest-api:* yarn start
 ```
 Refer [debug](https://www.npmjs.com/package/debug) to know how to selectively turn on logs.
 
