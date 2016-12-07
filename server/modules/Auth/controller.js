@@ -1,6 +1,6 @@
 'use strict';
 const jwt = require('jsonwebtoken');
-let config = require('../../../config/localConfig');
+const config = require('../../../config/env');
 let User = require('../User/repository');
 
 /**
