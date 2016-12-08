@@ -1,4 +1,4 @@
-# Express & mongoose REST API Boilerplate in ES7
+# Express & mongoose REST API Starter in ES7
 ## Getting Started
 
 Clone the repo:
